@@ -1,3 +1,13 @@
+/* global styling of html document*/
+
 html {
-  background-color: darkcyan;
+  background-color: #5A5A5A;;
 }
+
+nav {
+    background-color: #fafafa;
+  }
+
+/* navigation bar */
+
+
