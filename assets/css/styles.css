@@ -1,13 +1,21 @@
 /* global styling of html document*/
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 html {
-  background-color: #5A5A5A;;
+  background-color: #5a5a5a;
+}
+
+* {
+  font-family: "Ubuntu", monospace;
 }
 
 nav {
-    background-color: #fafafa;
-  }
+  background-color: #fafafa;
+}
 
 /* navigation bar */
 
-
+.navbar__links {
+  font-weight: 500;
+}
