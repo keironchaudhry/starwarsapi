@@ -1,7 +1,13 @@
 /* global styling of html document*/
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 html {
   background-color: #5a5a5a;
+}
+
+* {
+  font-family: "Ubuntu", monospace;
 }
 
 nav {
@@ -9,3 +15,7 @@ nav {
 }
 
 /* navigation bar */
+
+.navbar__links {
+  font-weight: 500;
+}
