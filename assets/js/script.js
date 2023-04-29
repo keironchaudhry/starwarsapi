@@ -18,7 +18,15 @@ fetch("https://swapi.dev/api/vehicles/")
     const vehicleList = document.getElementById("vehicle-list");
     for (const vehicle of vehicles) {
       const listItem = document.createElement("li");
-      listItem.innerHTML = `<strong>${vehicle.name}</strong> (Model: ${vehicle.model}, Crew: ${vehicle.crew}, Passengers: ${vehicle.passengers})`;
+      listItem.innerHTML = `
+      <p><strong>${vehicle.name}</strong></p> 
+      <p>Model: ${vehicle.model}</p> 
+      <p>Type: ${vehicle.vehicle_class}</p>
+      <p>Size: ${vehicle.length} m</p>
+      <p>Speed: ${vehicle.max_atmosphering_speed} km/h</p>
+      <p>Max Cargo Capacity: ${vehicle.cargo_capacity} kg</p>
+      <P>Purchase price: ${vehicle.cost_in_credits} RC</p>
+      `;
       vehicleList.appendChild(listItem);
     }
   })
@@ -44,7 +52,16 @@ fetch("https://swapi.dev/api/starships/")
     const starshipList = document.getElementById("starship-list");
     for (const starship of starships) {
       const listItem = document.createElement("li");
-      listItem.innerHTML = `<strong>${starship.name}</strong> (Model: ${starship.model}, Crew: ${starship.crew}, Passengers: ${starship.passengers})`;
+      listItem.innerHTML = `
+      <p><strong>${starship.name}</strong></p> 
+      <p>Model: ${starship.model}</p> 
+      <p>Type: ${starship.starship_class}</p>
+      <p>Size: ${starship.length} m</p>
+      <p>Speed: ${starship.max_atmosphering_speed} km/h</p>
+      <p>Max Cargo Capacity: ${starship.cargo_capacity} kg</p>
+      <p>Hyperdrive Rating: ${starship.hyperdrive_rating} </p>
+      <p>Price: ${starship.cost_in_credits} RC</p>
+      `;
       starshipList.appendChild(listItem);
     }
   })
