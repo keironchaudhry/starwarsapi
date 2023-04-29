@@ -55,8 +55,12 @@ fetch("https://swapi.dev/api/starships/")
       listItem.innerHTML = `
       <p><strong>${starship.name}</strong></p> 
       <p>Model: ${starship.model}</p> 
-      <p>Crew: ${starship.crew}</p> 
-      <p>Passengers: ${starship.passengers}</p>
+      <p>Type: ${starship.starship_class}</p>
+      <p>Size: ${starship.length} m</p>
+      <p>Speed: ${starship.max_atmosphering_speed} km/h</p>
+      <p>Max Cargo Capacity: ${starship.cargo_capacity} kg</p>
+      <p>Hyperdrive Rating: ${starship.hyperdrive_rating} </p>
+      <p>Price: ${starship.cost_in_credits} RC</p>
       `;
       starshipList.appendChild(listItem);
     }
