@@ -18,7 +18,15 @@ fetch("https://swapi.dev/api/vehicles/")
     const vehicleList = document.getElementById("vehicle-list");
     for (const vehicle of vehicles) {
       const listItem = document.createElement("li");
-      listItem.innerHTML = `<strong>${vehicle.name}</strong> (Model: ${vehicle.model}, Crew: ${vehicle.crew}, Passengers: ${vehicle.passengers})`;
+      listItem.innerHTML = `
+      <p><strong>${vehicle.name}</strong></p> 
+      <p>Model: ${vehicle.model}</p> 
+      <p>Type: ${vehicle.vehicle_class}</p>
+      <p>Size: ${vehicle.length} m</p>
+      <p>Speed: ${vehicle.max_atmosphering_speed} km/h</p>
+      <p>Max Cargo Capacity: ${vehicle.cargo_capacity} kg</p>
+      <P>Purchase price: ${vehicle.cost_in_credits} RC</p>
+      `;
       vehicleList.appendChild(listItem);
     }
   })
