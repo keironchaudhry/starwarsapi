@@ -52,7 +52,12 @@ fetch("https://swapi.dev/api/starships/")
     const starshipList = document.getElementById("starship-list");
     for (const starship of starships) {
       const listItem = document.createElement("li");
-      listItem.innerHTML = `<strong>${starship.name}</strong> (Model: ${starship.model}, Crew: ${starship.crew}, Passengers: ${starship.passengers})`;
+      listItem.innerHTML = `
+      <p><strong>${starship.name}</strong></p> 
+      <p>Model: ${starship.model}</p> 
+      <p>Crew: ${starship.crew}</p> 
+      <p>Passengers: ${starship.passengers}</p>
+      `;
       starshipList.appendChild(listItem);
     }
   })
